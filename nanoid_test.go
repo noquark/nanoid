@@ -36,7 +36,7 @@ func TestNoCollision(t *testing.T) {
 	}
 }
 
-func BenchmarkNew(b *testing.B) {
+func BenchmarkNanoID(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		_, _ = nanoid.New()
 	}
