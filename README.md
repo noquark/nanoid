@@ -30,28 +30,35 @@ For nanoID with custom length
 id, err := nanoid.New(7)
 ```
 
-## Benchmark
+### Benchmark
 
-So, I quickly compared this with 2 other nanoid implementations and 3 popular uuid implementations.
+So, I quickly compared this with other implementations.
 
 ```sh
-BenchmarkLong/mohitsinghs/nanoid-8               2018715               603.7 ns/op            24 B/op          1 allocs/op
-BenchmarkLong/bsm/nanoid-8                       1832822               657.5 ns/op            24 B/op          1 allocs/op
-BenchmarkLong/matoous/go-nanoid-8                 517705              2040 ns/op             144 B/op          3 allocs/op
-BenchmarkLong/satori/go.uuid-8                    596088              1750 ns/op              16 B/op          1 allocs/op
-BenchmarkLong/google/uuid-8                       585169              1755 ns/op              16 B/op          1 allocs/op
-BenchmarkLong/gofrs/uuid-8                        688498              1741 ns/op              16 B/op          1 allocs/op
-BenchmarkShort/mohitsinghs/nanoid-8              5009698               240.6 ns/op             8 B/op          1 allocs/op
-BenchmarkShort/bsm/nanoid-8                      4735372               253.7 ns/op             8 B/op          1 allocs/op
-BenchmarkShort/matoous/go-nanoid-8                562224              1878 ns/op              56 B/op          3 allocs/op
+BenchmarkLong/matoous/nanoid-8            590540              2072 ns/op             144 B/op          3 allocs/op
+BenchmarkLong/aidarkhanov/nanoid-8        329972              3424 ns/op              72 B/op          2 allocs/op
+BenchmarkLong/jkomyno/nanoid-8            641336              1859 ns/op              72 B/op          3 allocs/op
+BenchmarkLong/bsm/nanoid-8               1824750               661.6 ns/op            24 B/op          1 allocs/op
+BenchmarkLong/mohitsinghs/nanoid-8       1951998               617.4 ns/op            24 B/op          1 allocs/op
+BenchmarkShort/matoous/nanoid-8           544934              1896 ns/op              56 B/op          3 allocs/op
+BenchmarkShort/aidarkhanov/nanoid-8       563295              1801 ns/op              24 B/op          2 allocs/op
+BenchmarkShort/jkomyno/nanoid-8           671174              1802 ns/op              24 B/op          3 allocs/op
+BenchmarkShort/bsm/nanoid-8              4687411               252.0 ns/op             8 B/op          1 allocs/op
+BenchmarkShort/mohitsinghs/nanoid-8      5015697               244.2 ns/op             8 B/op          1 allocs/op
 ```
 
-## Notes
+### Notes
 
 - Custom alphabets are not supported yet
 
-## Credits and Alternatives
+### Credits
 
 - [ai/nanoid](https://github.com/ai/nanoid)
 - [matoous/go-nanoid](https://github.com/matoous/go-nanoid)
+
+### Alternatives
+
+- [matoous/go-nanoid](https://github.com/matoous/go-nanoid)
 - [bsm/nanoid](https://github.com/bsm/nanoid)
+- [aidarkhanov/nanoid](https://github.com/aidarkhanov/nanoid)
+- [jkomyno/nanoid](https://github.com/jkomyno/nanoid)
