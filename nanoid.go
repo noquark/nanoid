@@ -20,7 +20,7 @@ var (
 			return bufio.NewReader(rand.Reader)
 		},
 	}
-	ErrNegativeLength  = errors.New("negative id length")
+	ErrInvalidLength   = errors.New("invalid ID length")
 	ErrUnexpectedParam = errors.New("unexpected parameter")
 )
 
@@ -33,8 +33,8 @@ func New(s ...int) (string, error) {
 		size = DefaultSize
 	case len(s) == 1:
 		size = s[0]
-		if size < 0 {
-			return "", ErrNegativeLength
+		if size < 1 {
+			return "", ErrInvalidLength
 		}
 	default:
 		return "", ErrUnexpectedParam
