@@ -5,8 +5,8 @@
   <a href="https://pkg.go.dev/github.com/mohitsinghs/nanoid"><img src="https://pkg.go.dev/badge/github.com/mohitsinghs/nanoid.svg" alt="Go Reference"></a>
 </p>
 <p align="center">
-  <b>Yet another nanoID in Go</b><br/>
-  <sub>Derived from <a href="https://github.com/ai/nanoid">nanoid</a> and <a href="https://github.com/matoous/go-nanoid">go-nanoid</a> but faster</sub>
+  <b>A NanoID generator in Go</b><br/>
+  <sub>Based on <a href="https://github.com/ai/nanoid">nanoid</a> and <a href="https://github.com/matoous/go-nanoid">go-nanoid</a></sub>
 </p>
 <br />
 
@@ -30,12 +30,28 @@ For nanoID with custom length
 id, err := nanoid.New(7)
 ```
 
+## Benchmark
+
+So, I quickly compared this with 2 other nanoid implementations and 3 popular uuid implementations.
+
+```sh
+BenchmarkLong/mohitsinghs/nanoid-8               2018715               603.7 ns/op            24 B/op          1 allocs/op
+BenchmarkLong/bsm/nanoid-8                       1832822               657.5 ns/op            24 B/op          1 allocs/op
+BenchmarkLong/matoous/go-nanoid-8                 517705              2040 ns/op             144 B/op          3 allocs/op
+BenchmarkLong/satori/go.uuid-8                    596088              1750 ns/op              16 B/op          1 allocs/op
+BenchmarkLong/google/uuid-8                       585169              1755 ns/op              16 B/op          1 allocs/op
+BenchmarkLong/gofrs/uuid-8                        688498              1741 ns/op              16 B/op          1 allocs/op
+BenchmarkShort/mohitsinghs/nanoid-8              5009698               240.6 ns/op             8 B/op          1 allocs/op
+BenchmarkShort/bsm/nanoid-8                      4735372               253.7 ns/op             8 B/op          1 allocs/op
+BenchmarkShort/matoous/go-nanoid-8                562224              1878 ns/op              56 B/op          3 allocs/op
+```
+
 ## Notes
 
 - Custom alphabets are not supported yet
 
-## Credits
+## Credits and Alternatives
 
-- [ai](https://github.com/ai) : [nanoid](https://github.com/ai/nanoid)
-- [matoous](https://github.com/matoous) : [go-nanoid](https://github.com/matoous/go-nanoid)
-- Did I forget anyone ?
+- [ai/nanoid](https://github.com/ai/nanoid)
+- [matoous/go-nanoid](https://github.com/matoous/go-nanoid)
+- [bsm/nanoid](https://github.com/bsm/nanoid)
