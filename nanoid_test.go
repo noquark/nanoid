@@ -39,6 +39,11 @@ func TestNew(t *testing.T) {
 		}
 	})
 
+	t.Run("TestUnexpected", func(t *testing.T) {
+		_, err := nanoid.New(10, 15)
+		assert.Error(t, err, "should return error on unexpected params")
+	})
+
 	t.Run("TestNoCollision", func(t *testing.T) {
 		tries := 1000_000
 		used := make(map[string]bool)
