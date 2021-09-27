@@ -44,7 +44,7 @@ func New(s ...int) (string, error) {
 	defer entropyPool.Put(entropy)
 
 	bytes := make([]byte, size)
-	if _, err := io.ReadFull(entropy, bytes); err != nil {
+	if _, err := io.ReadAtLeast(entropy, bytes, size); err != nil {
 		return "", err
 	}
 
