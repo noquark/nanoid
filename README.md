@@ -34,19 +34,28 @@ id, err := nanoid.New(7)
 
 ### Benchmark
 
-So, I quickly compared this with other implementations.
-
 ```sh
-BenchmarkLong/matoous/nanoid-8            590540              2072 ns/op             144 B/op          3 allocs/op
-BenchmarkLong/aidarkhanov/nanoid-8        329972              3424 ns/op              72 B/op          2 allocs/op
-BenchmarkLong/jkomyno/nanoid-8            641336              1859 ns/op              72 B/op          3 allocs/op
-BenchmarkLong/bsm/nanoid-8               1824750               661.6 ns/op            24 B/op          1 allocs/op
-BenchmarkLong/mohitsinghs/nanoid-8       1951998               617.4 ns/op            24 B/op          1 allocs/op
-BenchmarkShort/matoous/nanoid-8           544934              1896 ns/op              56 B/op          3 allocs/op
-BenchmarkShort/aidarkhanov/nanoid-8       563295              1801 ns/op              24 B/op          2 allocs/op
-BenchmarkShort/jkomyno/nanoid-8           671174              1802 ns/op              24 B/op          3 allocs/op
-BenchmarkShort/bsm/nanoid-8              4687411               252.0 ns/op             8 B/op          1 allocs/op
-BenchmarkShort/mohitsinghs/nanoid-8      5015697               244.2 ns/op             8 B/op          1 allocs/op
+name                         time/op
+NanoID/mohitsinghs/nanoid-8   611ns ± 0%
+NanoID/bsm/nanoid-8           646ns ± 0%
+NanoID/jkomyno/nanoid-8      1.85µs ± 0%
+NanoID/aidarkhanov/nanoid-8  3.39µs ± 0%
+NanoID/matoous/go-nanoid-8   2.01µs ± 0%
+
+name                         alloc/op
+NanoID/mohitsinghs/nanoid-8   24.0B ± 0%
+NanoID/bsm/nanoid-8           24.0B ± 0%
+NanoID/jkomyno/nanoid-8       72.0B ± 0%
+NanoID/aidarkhanov/nanoid-8   72.0B ± 0%
+NanoID/matoous/go-nanoid-8     144B ± 0%
+
+name                         allocs/op
+NanoID/mohitsinghs/nanoid-8    1.00 ± 0%
+NanoID/bsm/nanoid-8            1.00 ± 0%
+NanoID/jkomyno/nanoid-8        3.00 ± 0%
+NanoID/aidarkhanov/nanoid-8    2.00 ± 0%
+NanoID/matoous/go-nanoid-8     3.00 ± 0%
+
 ```
 
 ### Notes
