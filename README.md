@@ -32,40 +32,10 @@ For nanoID with custom length
 id, err := nanoid.New(7)
 ```
 
-### Benchmark
-
-```sh
-name                         time/op
-NanoID/mohitsinghs/nanoid-8   611ns ± 0%
-NanoID/bsm/nanoid-8           646ns ± 0%
-NanoID/jkomyno/nanoid-8      1.85µs ± 0%
-NanoID/aidarkhanov/nanoid-8  3.39µs ± 0%
-NanoID/matoous/go-nanoid-8   2.01µs ± 0%
-
-name                         alloc/op
-NanoID/mohitsinghs/nanoid-8   24.0B ± 0%
-NanoID/bsm/nanoid-8           24.0B ± 0%
-NanoID/jkomyno/nanoid-8       72.0B ± 0%
-NanoID/aidarkhanov/nanoid-8   72.0B ± 0%
-NanoID/matoous/go-nanoid-8     144B ± 0%
-
-name                         allocs/op
-NanoID/mohitsinghs/nanoid-8    1.00 ± 0%
-NanoID/bsm/nanoid-8            1.00 ± 0%
-NanoID/jkomyno/nanoid-8        3.00 ± 0%
-NanoID/aidarkhanov/nanoid-8    2.00 ± 0%
-NanoID/matoous/go-nanoid-8     3.00 ± 0%
-
-```
-
-### Notes
-
-- Custom alphabets are not supported yet
-
 ### Credits
 
-- [ai/nanoid](https://github.com/ai/nanoid)
-- [matoous/go-nanoid](https://github.com/matoous/go-nanoid)
+- [ai/nanoid](https://github.com/ai/nanoid) for original nanoid
+- [matoous/go-nanoid](https://github.com/matoous/go-nanoid) for tests
 
 ### Alternatives
 
