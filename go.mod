@@ -1,4 +1,4 @@
-module github.com/mohitsinghs/nanoid
+module github.com/wormholesdev/nanoid
 
 go 1.18
 
