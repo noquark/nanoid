@@ -2,9 +2,9 @@
 <p align="center">
   <img src="https://github.com/wormholesdev/nanoid/actions/workflows/lint.yml/badge.svg" alt="Lint Status">
   <img src="https://github.com/wormholesdev/nanoid/actions/workflows/test.yml/badge.svg" alt="Test and Benchmark Status">
-  <a href="https://pkg.go.dev/github.com/wormholesdev/nanoid"><img src="https://pkg.go.dev/badge/github.com/mohitsinghs/nanoid.svg" alt="Go Reference"></a>
-  <a href="https://goreportcard.com/badge/github.com/wormholesdev/nanoid"><img src="https://goreportcard.com/badge/github.com/mohitsinghs/nanoid" alt="Go Report Card"></a>
-  <a href="https://github.com/wormholesdev/nanoid/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mohitsinghs/nanoid" alt="license MIT"></a>
+  <a href="https://pkg.go.dev/github.com/wormholesdev/nanoid"><img src="https://pkg.go.dev/badge/github.com/wormholesdev/nanoid.svg" alt="Go Reference"></a>
+  <a href="https://goreportcard.com/badge/github.com/wormholesdev/nanoid"><img src="https://goreportcard.com/badge/github.com/wormholesdev/nanoid" alt="Go Report Card"></a>
+  <a href="https://github.com/wormholesdev/nanoid/blob/master/LICENSE"><img src="https://img.shields.io/github/license/wormholesdev/nanoid" alt="license MIT"></a>
 </p>
 <p align="center">
   <b>A NanoID generator in Go</b><br/>
