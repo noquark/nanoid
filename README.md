@@ -1,10 +1,10 @@
 <h1 align='center'>nanoid</h1>
 <p align="center">
-  <img src="https://github.com/wormholesdev/nanoid/actions/workflows/lint.yml/badge.svg" alt="Lint Status">
-  <img src="https://github.com/wormholesdev/nanoid/actions/workflows/test.yml/badge.svg" alt="Test and Benchmark Status">
-  <a href="https://pkg.go.dev/github.com/wormholesdev/nanoid"><img src="https://pkg.go.dev/badge/github.com/wormholesdev/nanoid.svg" alt="Go Reference"></a>
-  <a href="https://goreportcard.com/badge/github.com/wormholesdev/nanoid"><img src="https://goreportcard.com/badge/github.com/wormholesdev/nanoid" alt="Go Report Card"></a>
-  <a href="https://github.com/wormholesdev/nanoid/blob/master/LICENSE"><img src="https://img.shields.io/github/license/wormholesdev/nanoid" alt="license MIT"></a>
+  <img src="https://github.com/noquark/nanoid/actions/workflows/lint.yml/badge.svg" alt="Lint Status">
+  <img src="https://github.com/noquark/nanoid/actions/workflows/test.yml/badge.svg" alt="Test and Benchmark Status">
+  <a href="https://pkg.go.dev/github.com/noquark/nanoid"><img src="https://pkg.go.dev/badge/github.com/noquark/nanoid.svg" alt="Go Reference"></a>
+  <a href="https://goreportcard.com/badge/github.com/noquark/nanoid"><img src="https://goreportcard.com/badge/github.com/noquark/nanoid" alt="Go Report Card"></a>
+  <a href="https://github.com/noquark/nanoid/blob/master/LICENSE"><img src="https://img.shields.io/github/license/noquark/nanoid" alt="license MIT"></a>
 </p>
 <p align="center">
   <b>A NanoID generator in Go</b><br/>
@@ -15,7 +15,7 @@
 ## Install
 
 ```bash
-$ go get github.com/wormholesdev/nanoid
+$ go get github.com/noquark/nanoid
 ```
 
 ## Usage

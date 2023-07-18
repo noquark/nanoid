@@ -3,9 +3,9 @@ package nanoid_test
 import (
 	"testing"
 
+	"github.com/noquark/nanoid"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/wormholesdev/nanoid"
 )
 
 func TestNew(t *testing.T) {
