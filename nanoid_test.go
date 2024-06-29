@@ -4,15 +4,17 @@ import (
 	"testing"
 
 	"github.com/noquark/nanoid"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 func TestNew(t *testing.T) {
 	t.Run("TestSimple", func(t *testing.T) {
 		id, err := nanoid.New()
-		assert.NoError(t, err, "shouldn't return error")
-		assert.Len(t, id, 21, "should return ID of default length")
+		if err != nil {
+			t.Errorf("unexpected error: %v", err)
+		}
+		if len(id) != 21 {
+			t.Errorf("expected ID length of 21, got %d", len(id))
+		}
 	})
 
 	t.Run("TestLength", func(t *testing.T) {
@@ -30,10 +32,16 @@ func TestNew(t *testing.T) {
 			t.Run(tt.desc, func(t *testing.T) {
 				id, err := nanoid.New(tt.length)
 				if tt.shouldErr {
-					assert.Error(t, err, "should return error on invalid length")
+					if err == nil {
+						t.Errorf("expected error on invalid length, got none")
+					}
 				} else {
-					assert.NoError(t, err, "shouldn't return error")
-					assert.Len(t, id, tt.expected, "should return ID of length %d", tt.length)
+					if err != nil {
+						t.Errorf("unexpected error: %v", err)
+					}
+					if len(id) != tt.expected {
+						t.Errorf("expected ID length of %d, got %d", tt.expected, len(id))
+					}
 				}
 			})
 		}
@@ -41,7 +49,9 @@ func TestNew(t *testing.T) {
 
 	t.Run("TestUnexpected", func(t *testing.T) {
 		_, err := nanoid.New(10, 15)
-		assert.Error(t, err, "should return error on unexpected params")
+		if err == nil {
+			t.Errorf("expected error for unexpected parames, got none")
+		}
 	})
 
 	t.Run("TestNoCollision", func(t *testing.T) {
@@ -50,7 +60,9 @@ func TestNew(t *testing.T) {
 
 		for i := 0; i < tries; i++ {
 			id := nanoid.Must()
-			require.False(t, used[id], "shouldn't return colliding IDs")
+			if used[id] {
+				t.Errorf("unexpected collsion")
+			}
 			used[id] = true
 		}
 	})
