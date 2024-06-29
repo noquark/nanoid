@@ -1,7 +1,6 @@
 <h1 align='center'>nanoid</h1>
 <p align="center">
-  <img src="https://github.com/noquark/nanoid/actions/workflows/lint.yml/badge.svg" alt="Lint Status">
-  <img src="https://github.com/noquark/nanoid/actions/workflows/test.yml/badge.svg" alt="Test and Benchmark Status">
+  <img src="https://github.com/noquark/nanoid/actions/workflows/test.yml/badge.svg" alt="CI Status">
   <a href="https://pkg.go.dev/github.com/noquark/nanoid"><img src="https://pkg.go.dev/badge/github.com/noquark/nanoid.svg" alt="Go Reference"></a>
   <a href="https://goreportcard.com/badge/github.com/noquark/nanoid"><img src="https://goreportcard.com/badge/github.com/noquark/nanoid" alt="Go Report Card"></a>
   <a href="https://github.com/noquark/nanoid/blob/master/LICENSE"><img src="https://img.shields.io/github/license/noquark/nanoid" alt="license MIT"></a>
