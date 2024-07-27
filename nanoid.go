@@ -53,9 +53,7 @@ func New(s ...int) (string, error) {
 	}
 
 	// zero copy conversion from []byte to string
-	// refer https://golang.org/src/strings/builder.go#L45
-	// and https://golang.org/ref/spec#Package_unsafe
-	return *(*string)(unsafe.Pointer(&bytes)), nil
+	return unsafe.String(unsafe.SliceData(bytes), len(bytes)), nil
 }
 
 // Same as New but panics on error.
